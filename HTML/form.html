@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/form.css">
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/form.css" />
     <script src="../JS/script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="sneaker-head">
-        <div class="logo"><img src="" alt="" /></div>
+      <div class="logo">
+        <img
+          src="../IMAGES/icons/sneakers.png"
+          alt=""
+          style="width: 50px; margin-left: 20px"
+          onclick="window.location.href='index.html'"
+        />
+      </div>
 
-        <nav class="navbar">
-            <ul class="navbar-links">
-                <li class="navbar-link"><a href="./index.html">О фирме</a></li>
-                <li class="navbar-link"><a href="./catalog.html">Каталог</a></li>
-                <li class="navbar-link"><a href="./services.html">Услуги</a></li>
-                <li class="navbar-link"><a href="./news.html">Новости</a></li>
-                <li class="navbar-link"><a href="./map.html">Карта сайта</a></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <ul class="navbar-links">
+          <li class="navbar-link"><a href="./index.html">О фирме</a></li>
+          <li class="navbar-link"><a href="./catalog.html">Каталог</a></li>
+          <li class="navbar-link"><a href="./services.html">Услуги</a></li>
+          <li class="navbar-link"><a href="./news.html">Новости</a></li>
+          <li class="navbar-link"><a href="./map.html">Карта сайта</a></li>
+        </ul>
+      </nav>
 
-        <button class="btn"  onclick="window.location.href='form.html'">
-            Заказать
-            <img
-                src="../IMAGES/icons/2.png"
-                style="width: 18px"
-                alt="Иконка"
-                title="Иконка"
-            />
-        </button>
+      <button class="btn" onclick="window.location.href='form.html'">
+        Заказать
+        <img
+          src="../IMAGES/icons/2.png"
+          style="width: 18px"
+          alt="Иконка"
+          title="Иконка"
+        />
+      </button>
     </header>
 
     <main>
-        <div class="form-container">
-            <form action="" id="myForm">
-                <label for="">Имя:</label>
-                <input type="text" name="name" id="name">
+      <div class="form-container">
+        <form action="" id="myForm">
+          <label for="">Имя:</label>
+          <input type="text" name="name" id="name" />
 
-                <label for="">Фамилия:</label>
-                <input type="text" name="lastname" id="last-name">
+          <label for="">Фамилия:</label>
+          <input type="text" name="lastname" id="last-name" />
 
-                <label for="">Электронная почта:</label>
-                <input type="email" name="email" id="email">
+          <label for="">Электронная почта:</label>
+          <input type="email" name="email" id="email" />
 
-                <label for="">После отправления заявки, вам позвонит наш консультант</label>
+          <label for="">Товар:</label>
+          <input type="text" id="product" name="product" list="productName" placeholder="Выберите товар" />
+          <datalist id="productName">
+            <option value="Nike Air Force 1 Low '07 'Triple White'">11 992₽</option>
+            <option value="New Balance 530 White Silver Navy">16 900₽</option>
+            <option value="Asics Gel-Kahana 8">10 616₽</option>
+            <option value="New Balance 530 Moonbeam">9 493₽</option>
+            <option value="Nike Dunk Low Cacao Wow Women's">16 900₽</option>
+            <option value="adidas originals Samba OG Cloud White Core Black">15 000₽</option>
+            <option value="Nike Dunk Low Grey Fog Men's">11 178₽</option>
+            <option value="Nike Air Force 1 '07 'Triple Black'">13 003₽</option>
+            <option value="Nike Air Max Plus Triple Black">14 407₽</option>
+            <option value="New Balance 574 Navy White">9 352₽</option>
+            <option value="Nike P-6000 Metallic Silver">12 582₽</option>
+            <option value="Adidas Originals Superstar Kids' Skateboarding Shoes">9 219₽</option>
+            <option value="Nike Blazer Mid 77 Jumbo White Black">10 195₽</option>
+            <option value="New Balance 2002R Protection Pack Navy Grey">11 198₽</option>
+            <option value="New Balance 2002R Protection Pack Rain Cloud">11 880₽</option>
+            <option value="Adidas Originals Yeezy Foam Rnr Mx Cinder">14 143₽</option>
+            <option value="Nike Air Max Terrascape Plus White Pure Platinum">10 616₽</option>
+            <option value="New Balance 530 Ivory">9 313₽</option>
+            <option value="iteball Adidas Originals 'Clear White Wild Pine'">20 103₽</option>
+            <option value="adidas originals Campus 00s Core Black">9 435₽</option>
+          </datalist>
 
-                <button class="btn btn-form" id="btn-form">Отправить</button>
-            </form>
-        </div>
+          <button class="btn btn-form" id="btn-form">Отправить</button>
+        </form>
+      </div>
     </main>
-</body>
+  </body>
 </html>
