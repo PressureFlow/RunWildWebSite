@@ -7,7 +7,6 @@
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 }
-
 body {
     opacity: 0;
     animation: ani 2s forwards;
@@ -60,9 +59,14 @@ img {
 	height: 50px;
 	align-items: center;
 	margin-right: 10px;
+
+	background-color: white;
+	z-index: 1;
 }
 .navbar {
 	margin-left: 10em;
+	
+	
 }
 .navbar ul {
 	display: flex;
@@ -88,6 +92,7 @@ img {
 	background-repeat: no-repeat;
 	display: flex;
 	align-items: center;
+	background-attachment:fixed;
 }
 .about-info {
 	width: 40%;
@@ -186,6 +191,9 @@ img {
 	flex-wrap: wrap;
 	flex-direction: column;
 }
+.news-container h1 {
+	margin-top: 40px;
+}
 .news-card {
 	width: 100%;
 	display: flex;
@@ -248,19 +256,37 @@ h2 {
 	height: 100px;
 }
 
+
 .services-cards {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
     padding: 10px;
     justify-content: center; 
+	background-color: rgba(105, 105, 105, 0.1);
+	border-radius: 20px;
 }
 .services-card {
     width: 20%;
     position: relative;
-    height: 180px;
+    height: 140px;
     overflow: hidden;
     margin: 10px;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scaleAnimation {
+	to {
+		transform: scale(1.15);
+	}
+}
+
+.services-card:hover {
+	animation: scaleAnimation .3s forwards;	
+	cursor: pointer;
+}
+.services-card:active {
+	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
 }
 .services-card img {
     position: absolute;
@@ -272,4 +298,137 @@ h2 {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #eee;
+}
+.main-title {
+	font-size: 5.5vw;
+	letter-spacing: 4px;
+	color: #ffa500;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.service-card {
+	width: 45%;
+	display: flex;
+	position: relative;
+	min-height: 300px;
+	overflow: hidden;
+	margin: 10px;
+	border-radius: 20px;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0.5;
+
+
+	animation-name: viewAnimations;
+	animation-timing-function: linear;
+	animation-timeline: scroll();
+	animation-fill-mode: both;
+	animation-range: 0 300px;
+
+
+	transform: translateY(200px);
+}
+.service-card button {
+	text-align: center;
+	width: 90%;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 10px;
+
+}
+.service-info {
+	position: absolute;
+	padding: 13px;
+	color: rgb(255, 255, 255);
+	background-color: #44444469;
+	width: 100%;
+	min-height: 200px;
+	border-radius: 20px;
+
+}
+.service-info p {
+	margin-top: 10px;
+	text-align: justify;
+}
+.service-image {
+	filter: blur(.8px) brightness(.3) contrast(.8);
+	z-index: -1;
+	height: 300px;
+	
+}
+.service-image img {
+	border-radius: 20px;
+}
+.service-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+@keyframes lineAnimationContainer {
+	to {
+		height: auto;
+	}
+}
+
+.line-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	
+	animation-name: lineAnimationContainer;
+	animation-timing-function: linear;
+	animation-timeline: scroll();
+	animation-fill-mode: both;
+	animation-range: 0 200px;
+	transition: .3s ease;
+}
+.line-container p {
+	position: absolute;
+	text-transform: uppercase;
+	pointer-events: none;
+	padding: 2px;
+}
+
+
+.line {
+	height: 22px;
+	width: 120px;
+	background-color: #ffa500;
+	border-radius: 20px;
+	cursor: pointer;
+
+}
+.line:hover {
+	width: 300px;
+	transition: .3s ease;
+}
+.navigation-map-container {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+	position: relative;
+	min-width: 35%;
+	margin-bottom: 40px;
+}
+
+.navigation-map-info {
+	width: 50%;
+	padding: 10px;
+	border-radius: 20px 20px 0px 0px;
+	height: 340px;
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+.navigation-map-image {
+	width: 50%;
+	border-radius: 20px;
+}
+
+.navigation-map-image img {
+	border-radius: 20px;
 }

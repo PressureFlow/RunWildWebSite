@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/form.css">
+    <script src="../JS/script.js" defer></script>
+</head>
+<body>
+    <header class="sneaker-head">
+        <div class="logo"><img src="" alt="" /></div>
+
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li class="navbar-link"><a href="./index.html">О фирме</a></li>
+                <li class="navbar-link"><a href="./catalog.html">Каталог</a></li>
+                <li class="navbar-link"><a href="./services.html">Услуги</a></li>
+                <li class="navbar-link"><a href="./news.html">Новости</a></li>
+                <li class="navbar-link"><a href="./map.html">Карта сайта</a></li>
+            </ul>
+        </nav>
+
+        <button class="btn"  onclick="window.location.href='form.html'">
+            Заказать
+            <img
+                src="../IMAGES/icons/2.png"
+                style="width: 18px"
+                alt="Иконка"
+                title="Иконка"
+            />
+        </button>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form action="" id="myForm">
+                <label for="">Имя:</label>
+                <input type="text" name="name" id="name">
+
+                <label for="">Фамилия:</label>
+                <input type="text" name="lastname" id="last-name">
+
+                <label for="">Электронная почта:</label>
+                <input type="email" name="email" id="email">
+
+                <label for="">После отправления заявки, вам позвонит наш консультант</label>
+
+                <button class="btn btn-form" id="btn-form">Отправить</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
